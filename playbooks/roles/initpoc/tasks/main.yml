@@ -1,0 +1,8 @@
+---
+- name: echo 'init poc'
+  command: echo "Initial POC for {{ poc_task }}"
+  register: result
+
+- name: print msg
+  debug:
+    msg: "{{ result.stdout_lines }}"
